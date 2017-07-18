@@ -103,6 +103,16 @@ namespace Week10using09
             }
         }
 
+        public int GetPowerRank(string name)
+        {
+            if(this._findPowerIndex(name) != -1)
+            {
+                return this.Powers[this._findPowerIndex(name)].Rank;
+            } else
+            {
+                return 0;
+            }
+        }
         /// <summary>
         /// The ToString method overrides the build-in Object.ToString method.
         /// It outputs a string that displays the superhuman's name and their powers.
