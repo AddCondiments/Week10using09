@@ -25,6 +25,13 @@ namespace Week10using09
             superVillian.AddPower("Malevolent Stare", 420);
             superVillian.AddPower("Imminent Betrayal", 69);
             Console.WriteLine(superVillian.ToString());
+
+            if (superVillian is IHasMalice)
+            {
+                Console.WriteLine("lolxd");
+            }
+
+            // No instanciated SuperHero type, and superHuman does not implement interfaces, so I used superVillian
         }
     }
 }
