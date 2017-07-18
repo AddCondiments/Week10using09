@@ -34,5 +34,17 @@ namespace Week10using09
             this.Name = name;
             this.Rank = rank;
         }
+
+        //Overload Methods, possibly may not work, we'll see
+
+        public static bool operator >(Power lhs, Power rhs)
+        {
+            return (lhs.Rank > rhs.Rank);
+        }
+
+        public static bool operator <(Power lhs, Power rhs)
+        {
+            return (lhs.Rank < rhs.Rank);
+        }
     }
 }

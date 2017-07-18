@@ -54,6 +54,31 @@ namespace Week10using09
             this._powers = new List<Power>(); // creates an empty list
         }
 
+        /*Goes through all powers, if the loop gets to the highest value Powers.Count, and becomes
+         * the same as the index counter, it returns a value to indicate to the user that no such power was found.
+         */
+
+        private int _findPowerIndex(string name)
+        {
+            int index = 0;
+            foreach(Power power in this.Powers)
+            {
+                if(name.Equals(power.Name))
+                {
+                    break;
+                }
+
+                index++;
+
+                if(this.Powers.Count == index)
+                {
+                    index = -1;
+                }
+            }
+
+            return index;
+        }
+
         // PUBLIC METHODS
 
         /// <summary>
